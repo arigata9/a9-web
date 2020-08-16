@@ -1,0 +1,27 @@
+{
+  "name": "a9-web",
+  "version": "1.0.0",
+  "description": "arigata9 website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arigata9/a9-web.git"
+  },
+  "keywords": [
+    "web",
+    "express",
+    "nodejs"
+  ],
+  "author": "arigata9",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/arigata9/a9-web/issues"
+  },
+  "homepage": "https://github.com/arigata9/a9-web#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
