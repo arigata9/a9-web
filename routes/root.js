@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
 router.get('/', (req, res) => {
-    res.sendFile('/static/index.html');
+    res.send('Seite noch im Aufbau. Come back later.');
     res.sendStatus(200);
 });
 
