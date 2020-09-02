@@ -130,26 +130,41 @@ var Terminal = Terminal || function(cmdLineContainer, outputContainer) {
         case 'logout':
           window.close();
           break;
-        case 'projects':
-          var project = args.join(' ');
-          if(!project) {
-            const availableProj = ['toughnut5', 'hackintoshbot']
-            output('Usage: ' + cmd + ' [project]');
-            output('Available Projects: <div class="ls-files">' + availableProj.join(' ') + '</div>');
-            output('Example: ' + cmd + ' toughnut5');
+        case 'ls':
+          const availableProj = ['toughnut5', 'hackintoshbot'];
+          var a = args.join(' ');
+          if(!a) {
+            output('<div class="ls-files">' + availableProj.join('<br>') + '</div>');
+          }
+          else if(a == '-la') {
+            output('total ' + availableProj.length);
+            output('drwxr-xr-x  2 user user  4096 Sep  1 22:39 .');
+            output('drwxr-xr-x  6 root root  4096 Sep  1 22:39 ..');
+            output('-rwxr-xr--  1 user user  4096 Mar  3 15:27 toughtnut5.lnk');
+            output('-rwxr-xr--  1 user user  4096 Aug 28 23:46 hackintoshbot.lnk');
             break;
           }
-          switch (project) {
-            case 'toughnut5':
+          else {
+            output('<div class="ls-files">' + availableProj.join('<br>') + '</div>');
+            break;
+          }
+        case 'start':
+          const availableFiles = ['toughnut5.lnk', 'hackintoshbot.lnk'];
+          var a = args.join(' ');
+          if(!a) {
+            output('Usage: ' + cmd + ' [filename]');
+            break;
+          }
+          switch(a) {
+            case 'toughnut5.lnk':
               location.href = '/toughnut5.html';
               break;
-            case 'hackintoshbot':
+            case 'hackintoshbot.lnk':
               location.href = 'http://bot.arigata9.de';
               break;
             default:
-              console.log('Unreachable');
+              output(a + ': File not found.');
           }
-          break;
         default:
           if (cmd) {
             output(cmd + ': command not found');
