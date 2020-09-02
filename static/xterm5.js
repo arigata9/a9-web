@@ -138,7 +138,7 @@ var Terminal = Terminal || function(cmdLineContainer, outputContainer) {
           if(!project) {
             const availableProj = ['toughnut5', 'hackintoshbot']
             output('Usage: ' + cmd + ' [project]');
-            output('Available Projects: <div class="ls-files">' + availableProj.join('<br>') + '</div>');
+            output('Available Projects: <div class="ls-files">' + availableProj.join(' ') + '</div>');
             output('Example: ' + cmd + ' toughnut5');
             break;
           }
