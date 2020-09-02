@@ -11,7 +11,7 @@ var Terminal = Terminal || function(cmdLineContainer, outputContainer) {
   var output_ = document.querySelector(outputContainer);
 
   const CMDS_ = [
-    'clear', 'clock', 'date', 'echo', 'help', 'projects', 'uname', 'whoami'
+    'clear', 'clock', 'date', 'echo', 'help', 'logout', 'projects', 'uname', 'whoami'
   ];
 
   var fs_ = null;
@@ -94,20 +94,6 @@ var Terminal = Terminal || function(cmdLineContainer, outputContainer) {
       }
 
       switch (cmd) {
-        case 'cat':
-          var url = args.join(' ');
-          if (!url) {
-            output('Usage: ' + cmd + ' https://s.codepen.io/...');
-            output('Example: ' + cmd + ' https://s.codepen.io/AndrewBarfield/pen/LEbPJx.js');
-            break;
-          }
-          $.get( url, function(data) {
-            var encodedStr = data.replace(/[\u00A0-\u9999<>\&]/gim, function(i) {
-               return '&#'+i.charCodeAt(0)+';';
-            });
-            output('<pre>' + encodedStr + '</pre>');
-          });
-          break;
         case 'clear':
           output_.innerHTML = '';
           this.value = '';
@@ -130,8 +116,19 @@ var Terminal = Terminal || function(cmdLineContainer, outputContainer) {
           output(navigator.appVersion);
           break;
         case 'whoami':
-          var result = "<img style=\"width: 200px; height: 200px\" src=\"IMG_1169.jpg\"><br><br>";
-          output(result);
+          var wswitch = args.join(' ');
+          if(wswitch == 'really') {
+            var result = "<img style=\"width: 200px; height: 200px\" src=\"http://memes.ucoz.com/_nw/59/03380775.jpg\"><br><br>";
+            output(result);
+            break;
+          }
+          else {
+            var result = "<img style=\"width: 200px; height: 200px\" src=\"IMG_1169.jpg\"><br><br>";
+            output(result);
+            break;
+          }
+        case 'logout':
+          window.close();
           break;
         case 'projects':
           var project = args.join(' ');
