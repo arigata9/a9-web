@@ -165,6 +165,7 @@ var Terminal = Terminal || function(cmdLineContainer, outputContainer) {
               break;
             default:
               output(a + ': File not found.');
+              break;
           }
         default:
           if (cmd) {
