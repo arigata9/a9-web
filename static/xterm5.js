@@ -135,6 +135,7 @@ var Terminal = Terminal || function(cmdLineContainer, outputContainer) {
           var a = args.join(' ');
           if(!a) {
             output('<div class="ls-files">' + availableProj.join('<br>') + '</div>');
+            break;
           }
           else if(a == '-la') {
             output('total ' + availableProj.length);
