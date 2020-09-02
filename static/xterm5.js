@@ -141,7 +141,7 @@ var Terminal = Terminal || function(cmdLineContainer, outputContainer) {
             output('total ' + availableProj.length);
             output('drwxr-xr-x  2 user user  4096 Sep  1 22:39 .');
             output('drwxr-xr-x  6 root root  4096 Sep  1 22:39 ..');
-            output('-rwxr-xr--  1 user user  4096 Mar  3 15:27 toughtnut5.lnk');
+            output('-rwxr-xr--  1 user user  4096 Mar  3 15:27 toughnut5.lnk');
             output('-rwxr-xr--  1 user user  4096 Aug 28 23:46 hackintoshbot.lnk');
             break;
           }
