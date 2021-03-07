@@ -131,7 +131,7 @@ var Terminal = Terminal || function(cmdLineContainer, outputContainer) {
           window.close();
           break;
         case 'ls':
-          const availableProj = ['toughnut5', 'hackintoshbot'];
+          const availableProj = ['toughnut5', 'hackintoshbot', 's1ff'];
           var a = args.join(' ');
           if(!a) {
             output('<div class="ls-files">' + availableProj.join('<br>') + '</div>');
@@ -143,6 +143,7 @@ var Terminal = Terminal || function(cmdLineContainer, outputContainer) {
             output('drwxr-xr-x  6 root root  4096 Sep  1 22:39 ..');
             output('-rwxr-xr--  1 user user  4096 Mar  3 15:27 toughnut5.lnk');
             output('-rwxr-xr--  1 user user  4096 Aug 28 23:46 hackintoshbot.lnk');
+            output('-rwxr-xr--  1 user user  4096 Jan 17 21:50 s1ff.lnk')
             break;
           }
           else {
@@ -150,7 +151,7 @@ var Terminal = Terminal || function(cmdLineContainer, outputContainer) {
             break;
           }
         case 'start':
-          const availableFiles = ['toughnut5.lnk', 'hackintoshbot.lnk'];
+          const availableFiles = ['toughnut5.lnk', 'hackintoshbot.lnk', 's1ff.lnk'];
           var a = args.join(' ');
           if(!a) {
             output('Usage: ' + cmd + ' [filename]');
@@ -162,6 +163,9 @@ var Terminal = Terminal || function(cmdLineContainer, outputContainer) {
               break;
             case 'hackintoshbot.lnk':
               location.href = 'http://bot.arigata9.de';
+              break;
+            case 's1ff.lnk':
+              location.href = 'http://s1ff.arigata9.de';
               break;
             default:
               output(a + ': File not found.');
