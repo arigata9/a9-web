@@ -13,7 +13,7 @@ app.use('/', rootRoute);
 
 //starting server
 https.createServer({
-    key: fs.readFileSync('./key.pem'),
+    key: fs.readFileSync('./privkey.pem'),
     cert: fs.readFileSync('./fullchain.pem')
 }, app).listen(config.bindport);
 console.log('Listening on Port xxxx');
