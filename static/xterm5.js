@@ -219,7 +219,7 @@ var Terminal = Terminal || function(cmdLineContainer, outputContainer) {
   //
   return {
     init: function() {
-      output('<img align="left" src="http://bot.arigata9.de/images/cube.gif" width="100" height="100" style="padding: 0px 10px 20px 0px"><h2 style="letter-spacing: 4px">A R I G A T A 9</h2><p>' + new Date() + '</p><p>Enter "help" for a list of available commands.</p>');
+      output('<img align="left" src="cube.gif" width="100" height="100" style="padding: 0px 10px 20px 0px"><h2 style="letter-spacing: 4px">A R I G A T A 9</h2><p>' + new Date() + '</p><p>Enter "help" for a list of available commands.</p>');
     },
     output: output
   }
