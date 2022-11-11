@@ -11,7 +11,7 @@ var Terminal = Terminal || function(cmdLineContainer, outputContainer) {
   var output_ = document.querySelector(outputContainer);
 
   const CMDS_ = [
-    'clear', 'clock', 'date', 'echo', 'help', 'logout', 'ls', 'start', 'uname', 'whoami'
+    'clear', 'clock', 'date', 'echo', 'help', 'logout', 'ls', 'open', 'uname', 'whoami'
   ];
 
   var fs_ = null;
@@ -150,7 +150,7 @@ var Terminal = Terminal || function(cmdLineContainer, outputContainer) {
             output('<div class="ls-files">' + availableProj.join('<br>') + '</div>');
             break;
           }
-        case 'start':
+        case 'open':
           const availableFiles = ['toughnut5.lnk', 'hackintoshbot.lnk', 's1ff.lnk'];
           var a = args.join(' ');
           if(!a) {
