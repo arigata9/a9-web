@@ -10,6 +10,6 @@ app.use(express.static("static"));
 app.use('/', rootRoute);
 
 //starting server
-app.listen(config.bindport, config.bindip, () => {
+app.listen(3000, config.bindip, () => {
     console.log(`Listening to ${config.bindip}:${config.bindport} !`);
 });
